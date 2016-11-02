@@ -24,6 +24,7 @@ class Api {
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_HEADER, 1);
+        curl_setopt($ch, CURLOPT_TIMEOUT_MS, 5000);
 
         if ($this->proxy) {
             curl_setopt($ch, CURLOPT_PROXYTYPE, CURLPROXY_SOCKS5);
